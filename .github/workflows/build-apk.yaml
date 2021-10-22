@@ -1,0 +1,15 @@
+name: unskool CI
+
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    name: build_apk
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout the cod    
+      uses: actions/checkout@v2
+    - name: Build debug apk
+      run: ./android/gradlew build      
