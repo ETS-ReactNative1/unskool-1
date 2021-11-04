@@ -4,18 +4,19 @@ on:
   push:
     branches:
       - master
+      - stage
 jobs:
   build:
     name: build_apk
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the cod    
-      uses: actions/checkout@v2
-      with:
-        ref: master
     - uses: nelonoel/branch-name@v1
       env:
         ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+    - name: Checkout the cod    
+      uses: actions/checkout@v2
+      with:
+        ref: ${env.BRANCH_NAME}        
     - name: test script
       run: |
         a=1
