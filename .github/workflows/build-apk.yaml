@@ -9,10 +9,10 @@ jobs:
     name: build_apk
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout the cod    
-      uses: actions/checkout@v2
-      with:
-        ref: master
+    # - name: Checkout the cod    
+    #   uses: actions/checkout@v2
+    #   with:
+    #     ref: master
     - name: check files
       run: | 
         pwd
