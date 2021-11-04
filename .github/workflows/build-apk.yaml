@@ -16,6 +16,6 @@ jobs:
     - name: check files
       run: ls .github/
     - name: Greets user
-      uses: ./.github/actions/hello-world
+      uses: ../.github/actions/hello-world
     - name: Build debug apk
       run: ./android/gradlew build   
