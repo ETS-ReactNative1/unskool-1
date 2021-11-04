@@ -15,7 +15,7 @@ jobs:
     #     ref: master
     - name: check files
       run: | 
-        pwd
+        ls .github/ -R
     - name: Greets user
       uses: ./.github/actions/hello-world
     - name: Build debug apk
