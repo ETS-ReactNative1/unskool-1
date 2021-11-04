@@ -16,8 +16,8 @@ jobs:
     - name: check files
       run: |
         pwd
-        ls
-        ls .github/
+        ls  
+        ls .github/actions/
     - name: Greets user
       uses: ./actions/hello-world
     - name: Build debug apk
