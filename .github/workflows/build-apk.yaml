@@ -1,7 +1,7 @@
 name: unskool CI
 
 on:
-  pull_request:
+  push:
     branches:
       - master
 jobs:
@@ -13,5 +13,10 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: master
+    - name: check files
+      run: | 
+        pwd
+    - name: Greets user
+      uses: ./.github/actions/hello-world
     - name: Build debug apk
-      run: ./android/gradlew build      
+      run: ./android/gradlew build   
