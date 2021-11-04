@@ -1,7 +1,7 @@
 name: unskool CI
 
 on:
-  pull_request:
+  push:
     branches:
       - master
 jobs:
@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: Checkout the cod    
       uses: actions/checkout@v2
-      # with:
-      #   ref: test-actions
+      with:
+        ref: master
     - name: check files
       run: | 
         pwd
