@@ -14,11 +14,9 @@ jobs:
       with:
         ref: test-actions
     - name: check files
-      run: |
-        pwd
-        ls  
-        ls .github/actions/
+      run: | 
+        ls .github/actions/hello-world
     - name: Greets user
-      uses: ./actions/hello-world
+      uses: .github/actions/hello-world
     - name: Build debug apk
       run: ./android/gradlew build   
