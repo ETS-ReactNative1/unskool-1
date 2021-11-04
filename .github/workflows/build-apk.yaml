@@ -14,7 +14,10 @@ jobs:
       with:
         ref: test-actions
     - name: check files
-      run: ls .github/
+      run: |
+        pwd
+        ls
+        ls .github/
     - name: Greets user
       uses: ./actions/hello-world
     - name: Build debug apk
