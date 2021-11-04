@@ -17,6 +17,6 @@ jobs:
       run: | 
         ls .github/actions/hello-world
     - name: Greets user
-      uses: .github/actions/hello-world
+      uses: ./actions/hello-world
     - name: Build debug apk
       run: ./android/gradlew build   
