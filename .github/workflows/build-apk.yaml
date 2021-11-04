@@ -13,11 +13,11 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: master
-    # - name: Extract branch name
-    #   if: github.event_name != 'pull_request'
-    #   shell: bash
-    #   run: echo "::set-env name=BRANCH_NAME::$(echo ${GITHUB_REF#refs/heads/})"
-    #   id: extract_branch        
+    - name: Extract branch name
+      if: github.event_name != 'pull_request'
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch        
     - name: test script
       run: |
         a=1
