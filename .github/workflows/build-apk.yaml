@@ -14,6 +14,6 @@ jobs:
       with:
         ref: test-actions
     - name: Greets user
-      uses: ./.github/actions/hello-world@test-actions
+      uses: ./.github/actions/hello-world
     - name: Build debug apk
       run: ./android/gradlew build   
