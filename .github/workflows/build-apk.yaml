@@ -16,7 +16,7 @@ jobs:
     - name: Checkout the cod    
       uses: actions/checkout@v2
       with:
-        ref: ${env.BRANCH_NAME}        
+        ref: ${{ env.BRANCH_NAME }}
     - name: test script
       run: |
         a=1
