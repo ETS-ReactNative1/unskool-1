@@ -18,6 +18,6 @@ jobs:
         ls -la
     - name: Greets user
       run: echo "hi"
-    -  uses: /.github/actions/hello-world
+    #-  uses: .github/actions/hello-world
     - name: Build debug apk
       run: ./android/gradlew build   
