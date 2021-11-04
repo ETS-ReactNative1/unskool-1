@@ -13,7 +13,18 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: master
+    - name: test script
+      run: |
+        a=1
+        if [  $a -eq 1 ]
+        then
+          echo "success"
+        else
+          echo "fail"
+        fi
     - name: Greetings
       uses: ./.github/actions/hello-world
     - name: Build debug apk
       run: ./android/gradlew build   
+
+      https://github.com/arjunoo7/android-/blob/master/gradlew
