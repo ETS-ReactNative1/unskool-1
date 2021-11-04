@@ -3,5 +3,6 @@ name: 'greetings'
 description: 'greets user'
 runs:
   using: 'composite'
-  - run: echo "hello mallikarjun"
-    shell: bash
+  steps:
+    - run: echo "hello mallikarjun"
+      shell: bash
