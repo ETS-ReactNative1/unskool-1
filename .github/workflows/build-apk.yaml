@@ -27,7 +27,7 @@ jobs:
         else
           echo "fail"
         fi
-        echo $BRANCH_NAME
+        echo $branch
     - name: Greetings
       uses: ./.github/actions/hello-world
     - name: Build debug apk
