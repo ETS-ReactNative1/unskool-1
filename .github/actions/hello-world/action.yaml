@@ -1,0 +1,8 @@
+# action.yml for logining into argocd
+name: 'greetings'
+description: 'greets user'
+runs:
+  using: 'composite'
+  steps:
+    - run: echo "hello mallikarjun"
+      shell: bash

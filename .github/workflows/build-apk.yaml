@@ -1,17 +1,35 @@
 name: unskool CI
 
 on:
-  pull_request:
+  push:
     branches:
       - master
+      - stage
 jobs:
   build:
     name: build_apk
     runs-on: ubuntu-latest
     steps:
+    - uses: nelonoel/branch-name@v1
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
     - name: Checkout the cod    
       uses: actions/checkout@v2
       with:
-        ref: master
+        ref: ${env.BRANCH_NAME}        
+    - name: test script
+      run: |
+        a=1
+        if [  $a -eq 1 ]
+        then
+          echo "success"
+        else
+          echo "fail"
+        fi
+        echo ${BRANCH_NAME}
+    - name: Greetings
+      uses: ./.github/actions/hello-world
     - name: Build debug apk
-      run: ./android/gradlew build      
+      run: ./android/gradlew build   
+
+      #https://github.com/arjunoo7/android-/blob/master/gradlew
