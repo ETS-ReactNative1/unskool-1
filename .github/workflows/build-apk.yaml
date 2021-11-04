@@ -11,8 +11,8 @@ jobs:
     steps:
     - name: Checkout the cod    
       uses: actions/checkout@v2
-      with:
-        ref: test-actions
+      # with:
+      #   ref: test-actions
     - name: check files
       run: | 
         pwd
