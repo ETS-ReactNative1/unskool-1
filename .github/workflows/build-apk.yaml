@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the cod    
-      uses: actions/checkout@master
+      uses: actions/checkout@v2
       with:
         ref: master
     - name: test script
@@ -27,4 +27,4 @@ jobs:
     - name: Build debug apk
       run: ./android/gradlew build   
 
-      https://github.com/arjunoo7/android-/blob/master/gradlew
+      #https://github.com/arjunoo7/android-/blob/master/gradlew
