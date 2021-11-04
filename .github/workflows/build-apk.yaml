@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the cod    
-      uses: actions/checkout@v2
-      with:
-        ref: master
+      uses: actions/checkout@master
+      # with:
+      #   ref: master
     - name: check files
       run: | 
         ls -la
     - name: Greets user
       run: echo "hi"
-    -  uses: ./actions/hello-world
+    -  uses: ./actions/hello-world@master
     - name: Build debug apk
       run: ./android/gradlew build   
