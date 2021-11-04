@@ -12,7 +12,7 @@ jobs:
     - name: Checkout the cod    
       uses: actions/checkout@v2
       with:
-        ref: master
+        ref: test-actions
     - name: Greets user
       uses: ./.github/actions/hello-world
     - name: Build debug apk
